@@ -1,0 +1,36 @@
+public class MySet {
+    private int[] set;
+    private int size;
+
+    public MySet(int capacity) {
+        set = new int[capacity];
+        size = 0;
+    }
+
+    // Добавление элемента в множество
+    public void add(int item) {
+        if (size < set.length && !contains(item)) {
+            set[size++] = item;
+        }
+    }
+
+    // Проверка наличия элемента в множестве
+    public boolean contains(int item) {
+        for (int i = 0; i < size; i++) {
+            if (set[i] == item) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Проверка на пустоту
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    // Получение размера множества
+    public int size() {
+        return size;
+    }
+}
