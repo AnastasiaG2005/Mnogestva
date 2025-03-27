@@ -1,0 +1,12 @@
+public class Main {
+    public static void main(String[] args) {
+        MySet mySet = new MySet(10);
+        mySet.add(10);
+        mySet.add(20);
+        mySet.add(30);
+        mySet.add(10); // Дубликат не добавится
+
+        System.out.println(mySet.contains(20)); // true
+        System.out.println(mySet.size()); // 3
+    }
+}
